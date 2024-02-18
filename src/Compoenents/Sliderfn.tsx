@@ -29,6 +29,8 @@ const Box = styled(motion.div) <{ bgPhoto: string }>`
     background-image: url(${props => props.bgPhoto});
     background-size: cover;
     background-position: center center;
+    display: flex;
+    align-items: center;
     height: 200px;
     width: 100%;
     font-size: 20px;
@@ -49,9 +51,6 @@ const Button = styled.div<{ isRight: boolean }>`
   top: 100px;
   right: ${(props) => (props.isRight ? 0 : null)};
   left: ${(props) => (props.isRight ? null : 0)};
-  display: flex;
-  place-items: center;
-
   border-radius: 12px;
   background-color: rgba(100, 100, 100, 0.4);
   cursor: pointer;
@@ -66,8 +65,8 @@ const Info = styled(motion.div)`
     padding: 10px;
     background-color: rgba(0,0,0,0.6);
     opacity: 0;
-    position: absolute;
     width: 100%;
+    position: absolute;
     bottom: 0;
     color: white;
     h4 {
